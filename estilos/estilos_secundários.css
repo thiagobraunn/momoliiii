@@ -1,0 +1,148 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'desenho';
+    src: url('../fonts/LXGWWenKaiMonoTC-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'love';
+    src: url('../fonts/KINKEE__.ttf') format('truetype');
+}
+
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+:root {
+    --cor0: #f17a78;
+    --cor1: #CB0400;
+    --cor2: #A21D1B;
+    --cor3: #772928;
+    --cor4: #4D2726;
+    --cor5: #332222;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'desenho', sans-serif;
+    --fonte-estilizada: 'love', sans-serif;
+}
+
+* {
+    margin: 0px;
+}
+
+body {
+    background-color: var(--cor3);
+}
+
+.fade-in {
+    opacity: 0;
+    animation: FadeIn 2s forwards;
+}
+
+
+header {
+    margin: auto;
+    padding: 40px;
+    text-align: center;
+    font-family: var(--fonte-estilizada);
+    background-image: linear-gradient(to bottom, var(--cor1), var(--cor3),var(--cor4));
+    overflow: hidden;
+    will-change: filter, transform, text-shadow;
+}
+
+header > h1 {
+    color: var(--cor0);
+    font-size: 4em;
+    font-weight: normal;
+    transition: text-shadow 0.3s, transform 0.3s;
+}
+
+header > h1:hover {
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+main {
+    min-width: 320px;
+    max-width: 1000px;
+    margin: auto;
+    background-color: var(--cor4);
+}
+
+main > h2 {
+    padding: 10px 20px 10px 20px;
+    font-size: 2em;
+    color: var(--cor0);
+    font-family: var(--fonte-destaque);
+}
+
+main > p {
+    text-indent: 20px;
+    text-align: justify;
+    font-size: 1.2em;
+    padding: 10px;
+    color: rgb(255, 215, 215);
+    line-height: 2em;
+    font-family: var(--fonte-padrao);
+}
+
+div.video {
+    background-color: var(--cor4);
+    padding: 20px;
+    padding-bottom: 57%;
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.image-container img {
+    max-width: 30%;
+    height: auto;
+    margin: 5px;
+}
+
+footer {
+    padding: 3px;
+    text-align: center;
+    color: var(--cor0);
+    background-color: var(--cor5);
+    font-weight: bold;
+}
+
+.paragrafo-voltar {
+    text-align: center;
+    font-size: 2em;
+    font-family: var(--fonte-destaque);
+    transition: text-shadow 0.3s, transform 0.3s;
+}
+
+.paragrafo-voltar:hover {
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.voltar {
+    color: white;
+    text-decoration: underline
+}
